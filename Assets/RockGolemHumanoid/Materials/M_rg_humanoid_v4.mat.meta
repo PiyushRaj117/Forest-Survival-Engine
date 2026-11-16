@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bf5b5ee87ed208c43813f55ff6cbfaa6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 412930
+  packageName: Rock Golem - Humanoid FREE
+  packageVersion: 1.0
+  assetPath: Assets/RockGolemHumanoid/Materials/M_rg_humanoid_v4.mat
+  uploadId: 1008816
