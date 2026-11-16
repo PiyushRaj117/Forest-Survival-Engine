@@ -70,6 +70,7 @@ public static class AntigravityBridge
         {
             _cts = new CancellationTokenSource();
             _listener = new HttpListener();
+            _listener.Prefixes.Add($"http://127.0.0.1:{Port}/");
             _listener.Prefixes.Add($"http://localhost:{Port}/");
             _listener.Start();
             Task.Run(() => ListenLoop(_cts.Token));
@@ -141,6 +142,22 @@ public static class AntigravityBridge
                         AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
                     };
                     responseJson = "{\"status\":\"refreshing\",\"message\":\"AssetDatabase.Refresh triggered\"}";
+                    break;
+
+                case "/generate-ui":
+                    EditorApplication.delayCall += () =>
+                    {
+                        ForestSurvival.EditorTools.SurvivalUIGenerator.GenerateSurvivalUI();
+                    };
+                    responseJson = "{\"status\":\"ui_generated\",\"message\":\"Survival HUD canvas generated\"}";
+                    break;
+
+                case "/generate-sotf-ui":
+                    EditorApplication.delayCall += () =>
+                    {
+                        ForestSurvival.EditorTools.SOTF_HUDGenerator.GenerateSOTFHUD();
+                    };
+                    responseJson = "{\"status\":\"sotf_ui_generated\",\"message\":\"Sons of the Forest style HUD generated\"}";
                     break;
 
                 case "/status":
