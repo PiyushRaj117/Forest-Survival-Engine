@@ -27,6 +27,11 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
+        // 0. Ensure time and cursor are correct for menu
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         // 1. Initial panel states
         if (mainButtonsPanel != null) mainButtonsPanel.SetActive(false);
         if (settingsPanel != null) settingsPanel.SetActive(false);
@@ -93,11 +98,13 @@ public class MainMenuManager : MonoBehaviour
 
     public void PlayGame()
     {
+        Debug.Log("[MainMenu] Button triggered: PlayGame");
         SceneManager.LoadScene("SampleScene");
     }
 
     public void OpenSettings()
     {
+        Debug.Log("[MainMenu] Button triggered: OpenSettings");
         if (settingsPanel != null)
         {
             if (mainButtonsPanel != null) mainButtonsPanel.SetActive(false);
@@ -107,12 +114,14 @@ public class MainMenuManager : MonoBehaviour
 
     public void CloseSettings()
     {
+        Debug.Log("[MainMenu] Button triggered: CloseSettings");
         if (settingsPanel != null) settingsPanel.SetActive(false);
         if (mainButtonsPanel != null) mainButtonsPanel.SetActive(true);
     }
 
     public void QuitGame()
     {
+        Debug.Log("[MainMenu] Button triggered: QuitGame");
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

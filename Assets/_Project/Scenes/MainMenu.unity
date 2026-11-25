@@ -266,8 +266,9 @@ MonoBehaviour:
   progressText: {fileID: 1609021362}
   loadingDuration: 10
   playButton: {fileID: 644}
-  settingsButton: {fileID: 0}
-  quitButton: {fileID: 0}
+  settingsButton: {fileID: 654}
+  quitButton: {fileID: 664}
+  backButton: {fileID: 854}
 --- !u!1 &300
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +472,7 @@ RectTransform:
   m_GameObject: {fileID: 600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 611}
@@ -993,19 +994,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 653}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 202}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: OpenSettings
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,19 +1194,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 202}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: QuitGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1303,7 @@ RectTransform:
   m_GameObject: {fileID: 700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 711}
@@ -2498,19 +2475,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 853}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 202}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: OpenMainPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,7 +2589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -300}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 620, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &807300854
