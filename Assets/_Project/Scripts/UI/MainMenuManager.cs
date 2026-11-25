@@ -23,6 +23,7 @@ public class MainMenuManager : MonoBehaviour
     public Button playButton;
     public Button settingsButton;
     public Button quitButton;
+    public Button backButton;
 
     private void Start()
     {
@@ -50,6 +51,11 @@ public class MainMenuManager : MonoBehaviour
         {
             quitButton.onClick.RemoveAllListeners();
             quitButton.onClick.AddListener(QuitGame);
+        }
+        if (backButton != null)
+        {
+            backButton.onClick.RemoveAllListeners();
+            backButton.onClick.AddListener(CloseSettings);
         }
     }
 
@@ -107,6 +113,10 @@ public class MainMenuManager : MonoBehaviour
 
     public void QuitGame()
     {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
     }
 }
